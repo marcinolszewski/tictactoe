@@ -45,11 +45,7 @@ const endDrawGame = () => {
   }, 2000);
 }
 
-const drawGame = () => {
-  if(drawCounter === 9) {
-    endDrawGame();
-  };
-};
+const drawGame = () => drawCounter === 9 ? endDrawGame() : false;
 
 const determinePlayer = () => {
   player === 0 ? player = 1 : player = 0;
