@@ -8,22 +8,41 @@
   --border: 1px solid black;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 20px 0px;
+}
+
+.winner {
+  background-color: #000;
+  color: #fff !important;
+}
+
 .wrapper {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
+}
+
+.wrapper p {
+  margin: 5px 0px;
 }
 
 .grid {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .grid-box {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   flex: 0 0 33.333%;
 }
 
@@ -79,4 +98,9 @@
 
 .grid-box:nth-child(8) {
   border-right: var(--border);
+}
+
+.winner {
+  background-color: #000;
+  color: #fff;
 }
