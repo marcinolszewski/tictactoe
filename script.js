@@ -34,15 +34,17 @@ const endGame = sequence => {
 };
 
 const endDrawGame = () => {
+  tile.forEach(el => el.classList.add('winner'));
   tile.forEach(el => el.removeEventListener('click', makeMove));
   round++;
   drawCounter = 0;
   winner.innerText = 'DRAW';
   roundNumber.innerText = round;
   setTimeout(() => {
+    tile.forEach(el => el.classList.remove('winner'));
     resetBoard();
     startGame();
-  }, 2000);
+  }, 2000); 
 }
 
 const drawGame = () => drawCounter === 9 ? endDrawGame() : false;
